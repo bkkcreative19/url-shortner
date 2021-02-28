@@ -14,6 +14,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 ul {
@@ -48,6 +49,7 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
   width: 75%;
   margin: 0 auto;
   display: flex;
+  position: relative;
 
   @media screen and(max-width: 750px) {
     width: 90%;
@@ -177,6 +179,12 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
   margin-top: 10rem;
   margin-bottom: 10rem;
   height: 14rem;
+  position: absolute;
+  top: 50rem;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  // background: rgba(192, 189, 189, 0.137);
 
   & .container {
     height: 100%;
@@ -220,13 +228,61 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
   }
 }
 
+// results
+.results {
+  margin-bottom: 20rem;
+  flex-direction: column;
+  gap: 1rem;
+  // width: 100%;
+  position: relative;
+  top: 10rem;
+  // display: none;
+
+  // background: rgba(192, 189, 189, 0.137);
+  // display: none;
+  &__result {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+
+    & h4 {
+      font-size: 1.8rem;
+      font-family: 700;
+    }
+
+    & span {
+      margin-left: auto;
+      color: $Cyan;
+      margin-right: 1.5rem;
+      font-size: 1.8rem;
+      font-family: 700;
+    }
+
+    &-btn {
+      background: $Cyan;
+      border: none;
+      color: #fff;
+      font-weight: 500;
+      font-family: "Poppins", sans-serif;
+      padding: 1rem 3rem;
+      border-radius: 0.5rem;
+      // margin-top: 2rem;
+    }
+    // flex-direction: row;
+  }
+}
+
 // statistics
 
 .statistics {
-  // margin-top: 30rem;
+  margin-top: 10rem;
+  // padding-bottom: 10rem;
   // margin-bottom: 30rem;
   background: rgba(192, 189, 189, 0.137);
   // height: 80vh;
+  position: relative;
   & .container {
     flex-direction: column;
     text-align: center;
@@ -234,6 +290,7 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 
   &__head {
     position: relative;
+    margin-top: 1rem;
     &-heading {
       font-size: 4.5rem;
       font-weight: 700;
@@ -261,6 +318,7 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
     position: relative;
     gap: 3rem;
     margin-top: 5rem;
+    margin-bottom: 18rem;
 
     @media screen and(max-width: 750px) {
       flex-direction: column;
@@ -338,7 +396,7 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
   height: 16rem;
   background: url(../images/bg-boost-desktop.svg) center no-repeat;
   background-size: cover;
-  margin: 14rem 0 0;
+  margin: 0 0 0;
 
   @media screen and(max-width: 750px) {
     // margin: 20rem 0;
